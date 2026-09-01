@@ -116,7 +116,7 @@ function App() {
             <div className="profile-avatar">AS</div>
             <div className="panel-card">
               <span className="panel-label">Currently</span>
-              <strong>Senior Frontend Engineer</strong>
+              <strong>Frontend Engineer</strong>
               <small>Leading product experiences for B2B and SaaS teams.</small>
             </div>
             <div className="stats-grid">
