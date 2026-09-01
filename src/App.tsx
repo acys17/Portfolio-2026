@@ -93,7 +93,7 @@ function App() {
             <p className="eyebrow">Developer • Designer • Problem Solver</p>
             <h1>Building thoughtful digital products with clarity and momentum.</h1>
             <p className="lede">
-              I’m Alex, a product-minded frontend engineer helping teams turn ambitious ideas into intuitive, high-performing experiences.
+              I’m Alice, a product-minded frontend engineer helping teams turn ambitious ideas into intuitive, high-performing experiences.
             </p>
 
             <div className="cta-row">
@@ -224,7 +224,7 @@ function App() {
               I&apos;m open to consulting, product partnerships, and full-time opportunities where thoughtful execution matters.
             </p>
             <div className="contact-links">
-              <a href="mailto:alex@portfolio.dev">alex@portfolio.dev</a>
+              <a href="mailto:alice.cy.scott@gmail.com">alice.cy.scott@gmail.com</a>
               <a href="https://github.com" target="_blank" rel="noreferrer">
                 GitHub
               </a>
