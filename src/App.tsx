@@ -1,76 +1,8 @@
 import './App.css'
+import { navItems, skills, roles, projects } from './data'
 
-// TODO: Move data to a separate file and import it here
-// TODO: Add a type for the data structure
-// TODO: Update content
 // TODO: Reusable components
 // TODO: Add CV download link
-
-const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-]
-
-const skills = [
-  'TypeScript',
-  'React',
-  'Node.js',
-  'Design Systems',
-  'UX Strategy',
-  'API Design',
-  'Testing',
-  'Performance',
-]
-
-const roles = [
-  {
-    title: 'Senior Frontend Engineer',
-    company: 'Northstar Studio',
-    period: '2022 — Present',
-    description:
-      'Led product architecture for client-facing platforms, shipped accessible design systems, and partnered with product teams to turn research into high-converting experiences.',
-  },
-  {
-    title: 'Full-Stack Developer',
-    company: 'Signal Forge',
-    period: '2019 — 2022',
-    description:
-      'Built internal tools, dashboards, and marketing sites that improved delivery speed while scaling analytics and customer onboarding workflows.',
-  },
-  {
-    title: 'Product Designer / Developer',
-    company: 'Freelance',
-    period: '2016 — 2019',
-    description:
-      'Worked with founders to design and ship MVPs across SaaS, e-commerce, and service businesses with a focus on clarity, performance, and conversion.',
-  },
-]
-
-const projects = [
-  {
-    name: 'Atlas Commerce',
-    type: 'B2B commerce platform',
-    summary:
-      'A modular storefront with personalized buyer journeys, order management, and analytics-driven merchandising.',
-    stack: ['React', 'Node', 'Postgres'],
-  },
-  {
-    name: 'Pulse Board',
-    type: 'Operations dashboard',
-    summary:
-      'A KPI dashboard used by cross-functional teams to align roadmap progress, customer health, and delivery signals.',
-    stack: ['TypeScript', 'Charting', 'REST APIs'],
-  },
-  {
-    name: 'Northwind Labs',
-    type: 'Brand + product experience',
-    summary:
-      'A research-driven marketing site that blended editorial storytelling with product storytelling for a new AI platform.',
-    stack: ['Next.js', 'Motion', 'CMS'],
-  },
-]
 
 function App() {
   return (
@@ -97,9 +29,9 @@ function App() {
         <section id="home" className="hero section">
           <div className="hero-copy">
             <p className="eyebrow">Developer • Problem Solver</p>
-            <h1>Building thoughtful digital products with clarity and momentum.</h1>
+            <h1>Building responsive, accessible digital products and data-driven user experiences.</h1>
             <p className="lede">
-              I’m Alice, a product-minded software engineer helping teams turn ambitious ideas into intuitive, high-performing experiences.
+              I’m Alice, a product-minded software engineer specialising in React, TypeScript, JavaScript (ES6+), and modern AWS cloud architecture.
             </p>
 
             <div className="cta-row">
@@ -121,7 +53,7 @@ function App() {
             <div className="profile-avatar">AS</div>
             <div className="panel-card">
               <span className="panel-label">Currently</span>
-              <strong>Software Engineer</strong>
+              <strong>Software Developer</strong>
               <small>Leading product experiences for B2B and SaaS teams.</small>
             </div>
           </div>
@@ -130,16 +62,16 @@ function App() {
         <section id="about" className="section">
           <div className="section-header">
             <p className="section-kicker">01 / About</p>
-            <h2>Designing software that feels human.</h2>
+            <h2>A bit about me</h2>
           </div>
 
           <div className="about-grid">
             <div className="about-copy">
               <p>
-                I work at the intersection of engineering, design, and strategy. My approach is grounded in product thinking: understanding the user problem first, then crafting interfaces that are beautiful, accessible, and reliable.
+                I am an analytical, outcome-driven Software Engineer with over 4 years of commercial experience creating fast, reliable web applications. My background combines modern frontend delivery using React, TypeScript, and Redux with full-stack capability in Node.js, PHP, and AWS cloud services.
               </p>
               <p>
-                From early-stage MVPs to scalable platform work, I help teams move from ideas to polished products with a focus on measurable outcomes and a smooth user experience.
+                Prior to software engineering, I earned a degree in Zoology (where I first fell in love with logic and statistical data analysis using R) and served as a Police Constable in London, developing high-pressure problem-solving and communication skills. Today, I apply that same discipline to clean code, TDD, and full-cycle feature delivery.                
               </p>
             </div>
 
@@ -153,29 +85,6 @@ function App() {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        <section id="experience" className="section">
-          <div className="section-header">
-            <p className="section-kicker">02 / Experience</p>
-            <h2>Building products across teams and stages.</h2>
-          </div>
-
-          <div className="timeline">
-            {roles.map((role) => (
-              <article key={role.title} className="timeline-item">
-                <div className="timeline-dot" aria-hidden="true" />
-                <div className="timeline-content">
-                  <div className="timeline-heading">
-                    <h3>{role.title}</h3>
-                    <span>{role.period}</span>
-                  </div>
-                  <p className="company-name">{role.company}</p>
-                  <p>{role.description}</p>
-                </div>
-              </article>
-            ))}
           </div>
         </section>
 
@@ -198,6 +107,37 @@ function App() {
                       <span key={item}>{item}</span>
                     ))}
                   </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="experience" className="section">
+          <div className="section-header">
+            <p className="section-kicker">02 / Experience</p>
+            <h2>Building products across teams and stages.</h2>
+          </div>
+
+          <div className="timeline">
+            {roles.map((role) => (
+              <article key={role.title} className="timeline-item">
+                <div className="timeline-dot" aria-hidden="true" />
+                <div className="timeline-content">
+                  <div className="timeline-heading">
+                    <h3>{role.title}</h3>
+                    <span>{role.period}</span>
+                  </div>
+                  <p className="company-name">{role.company}</p>
+                  {Array.isArray(role.description) ? (
+                    <ul className="role-bullets">
+                      {role.description.map((d, i) => (
+                        <li key={i}>{d}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{role.description}</p>
+                  )}
                 </div>
               </article>
             ))}
