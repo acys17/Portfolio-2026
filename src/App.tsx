@@ -1,9 +1,15 @@
 import './App.css'
 
+// TODO: Move data to a separate file and import it here
+// TODO: Add a type for the data structure
+// TODO: Update content
+// TODO: Reusable components
+// TODO: Add CV download link
+
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Work', href: '#work' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -90,14 +96,14 @@ function App() {
       <main>
         <section id="home" className="hero section">
           <div className="hero-copy">
-            <p className="eyebrow">Developer • Designer • Problem Solver</p>
+            <p className="eyebrow">Developer • Problem Solver</p>
             <h1>Building thoughtful digital products with clarity and momentum.</h1>
             <p className="lede">
-              I’m Alice, a product-minded frontend engineer helping teams turn ambitious ideas into intuitive, high-performing experiences.
+              I’m Alice, a product-minded software engineer helping teams turn ambitious ideas into intuitive, high-performing experiences.
             </p>
 
             <div className="cta-row">
-              <a href="#work" className="primary-button">
+              <a href="#projects" className="primary-button">
                 View projects
               </a>
               <a href="#about" className="secondary-button">
@@ -106,9 +112,8 @@ function App() {
             </div>
 
             <ul className="meta-list" aria-label="Quick facts">
-              <li>8+ years building products</li>
-              <li>Available for select projects</li>
-              <li>Based in Seattle, WA</li>
+              <li>4+ years building products</li>
+              <li>Based in London</li>
             </ul>
           </div>
 
@@ -116,22 +121,8 @@ function App() {
             <div className="profile-avatar">AS</div>
             <div className="panel-card">
               <span className="panel-label">Currently</span>
-              <strong>Frontend Engineer</strong>
+              <strong>Software Engineer</strong>
               <small>Leading product experiences for B2B and SaaS teams.</small>
-            </div>
-            <div className="stats-grid">
-              <div>
-                <strong>40+</strong>
-                <span>launches</span>
-              </div>
-              <div>
-                <strong>12</strong>
-                <span>industries</span>
-              </div>
-              <div>
-                <strong>99%</strong>
-                <span>client retention</span>
-              </div>
             </div>
           </div>
         </section>
@@ -188,10 +179,10 @@ function App() {
           </div>
         </section>
 
-        <section id="work" className="section">
+        <section id="projects" className="section">
           <div className="section-header">
             <p className="section-kicker">03 / Selected work</p>
-            <h2>Recent product work and experiments.</h2>
+            <h2>Recent projects.</h2>
           </div>
 
           <div className="project-grid">
